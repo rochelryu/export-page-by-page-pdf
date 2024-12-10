@@ -20,7 +20,7 @@ const splitPdf = async (inputPdfPaths) => {
 
             // Sauvegarder chaque page dans un nouveau fichier
             const pdfBytes = await newPdf.save();
-            const outputFilename = `page_${indexAccount}.pdf`;
+            const outputFilename = `Table_${indexAccount}.pdf`;
             fs.writeFileSync(outputFilename, pdfBytes);
             console.log(`Page ${indexAccount} exportée sous ${outputFilename}`);
             indexAccount++;
@@ -31,4 +31,5 @@ const splitPdf = async (inputPdfPaths) => {
 };
 
 // Appeler la fonction avec le chemin du PDF
-splitPdf(['1_48.pdf', '49_96.pdf', '50_144.pdf', '145_192.pdf', '193_240.pdf', '241_270.pdf', '271_318.pdf', '319_352.pdf']);
+//splitPdf(['1_48.pdf', '49_96.pdf', '50_144.pdf', '145_192.pdf', '193_240.pdf', '241_270.pdf', '271_318.pdf', '319_352.pdf']);
+splitPdf(['LISTE_TABLE_1_40.pdf']);
